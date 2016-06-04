@@ -14,6 +14,7 @@ export class TaskService {
     this.taskItems$ = af.list(`/tasks/${auth.id}`) as FirebaseListObservable<ITask[]>;
   }
 
+
   createTask(title: string): Promise<any> {
     return this.taskItems$.push(new Task(title));
   }
