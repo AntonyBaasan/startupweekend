@@ -1,23 +1,30 @@
 <!-- search for rentals -->
-<h1>What can we help you rent?</h1>
-
+<div class="container text-center">
+	<h1>What can we help you rent?</h1>
 <div class="row">
-	<div class="col-lg-12">
+<!--	<div class="col-lg-8"> -->
+	<div class="col-lg-8">
 		<form action="/search">
-			<input type="text" class="form-control span5" placeholder="e.g. Snowboard, Carpet Cleaner, etc..." queryString="query" >
-			<br /><a href="#">Advanced search</a>
-<!--		Price Range:
-		<input type="int" priceFilter="price">
-		Location range:
-		<select location="location">
-			<option value="km1">Within 1 KM</option>
-			<option value="km3">Within 3 KM</option>
-			<option value="km5">Within 5 KM</option>
-			<option value="km10">Within 10 KM</option>
-			<option value="over10">10 KM+</option>
-		</select>
--->
-			<button type="submit" class="btn btn-large btn-primary">Find</button>
+			<div class="container">
+			<div class="form-group input-group-lg col-lg-8 col-lg-offset-2">
+				<input type="text" class="form-control col-lg-4" placeholder="e.g. Snowboard, Carpet Cleaner, etc..." queryString="query" >
+				<div style="margin-top: 15px; clear: both;">
+				<button type="submit" class="btn btn-primary btn-lg">Find</button> <button type="submit" class="btn btn-primary-outline btn-lg">Advanced Search</button>
+				</div>
+			</div>
+			</div>
+	<!--		Price Range:
+			<input type="int" priceFilter="price">
+			Location range:
+			<select location="location">
+				<option value="km1">Within 1 KM</option>
+				<option value="km3">Within 3 KM</option>
+				<option value="km5">Within 5 KM</option>
+				<option value="km10">Within 10 KM</option>
+				<option value="over10">10 KM+</option>
+			</select>
+	-->
 		</form>
 	</div>
+</div>
 </div>
