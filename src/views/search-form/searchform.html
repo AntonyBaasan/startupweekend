@@ -1,19 +1,23 @@
-<title> Search for rentals</title>
+<!-- search for rentals -->
+<h1>What can we help you rent?</h1>
 
-<h1> Search </h1>
-<form action="/search">
-Keywords: 
-<input type="text" queryString ="query">
-Price Range: 
-<input type="int" priceFilter="price">
-Location range: 
-<select location="location">
-	<option value="km1">Within 1 KM</option>
-	<option value="km3">Within 3 KM</option>
-	<option value="km5">Within 5 KM</option>
-	<option value="km10">Within 10 KM</option>
-	<option value="over10">10 KM+</option>
-</select>
-
-<input type="submit" value="Submit">
-</form>
+<div class="row">
+	<div class="col-lg-12">
+		<form action="/search">
+			<input type="text" class="form-control span5" placeholder="e.g. Snowboard, Carpet Cleaner, etc..." queryString="query" >
+			<br /><a href="#">Advanced search</a>
+<!--		Price Range:
+		<input type="int" priceFilter="price">
+		Location range:
+		<select location="location">
+			<option value="km1">Within 1 KM</option>
+			<option value="km3">Within 3 KM</option>
+			<option value="km5">Within 5 KM</option>
+			<option value="km10">Within 10 KM</option>
+			<option value="over10">10 KM+</option>
+		</select>
+-->
+			<button type="submit" class="btn btn-large btn-primary">Find</button>
+		</form>
+	</div>
+</div>
