@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
-
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-header',
@@ -11,7 +10,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
     <header class="header">
       <div class="g-row">
         <div class="g-col">
-          <h1 class="header__title">{{project_title}}</h1>
+          <h1 class="header__title">{{projectTitle}}</h1>
     
           <ul class="header__links">
             <li *ngIf="authenticated"><a class="header__link" (click)="signOut.emit()" href="#">Sign out</a></li>
@@ -24,7 +23,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 })
 
 export class AppHeader {
-  project_title:string = "project_title - Startup";
+  projectTitle:string = "project_title - Startup";
   @Input() authenticated: boolean;
   @Output() signOut: EventEmitter<any> = new EventEmitter(false);
 }

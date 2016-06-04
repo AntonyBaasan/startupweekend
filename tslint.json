@@ -77,7 +77,6 @@
     "no-trailing-whitespace": true,
     "no-unreachable": true,
     "no-unused-expression": true,
-    "no-unused-variable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": false,
@@ -87,13 +86,8 @@
       "check-open-brace",
       "check-whitespace"
     ],
-    "quotemark": [
-      true,
-      "single",
-      "avoid-escape"
-    ],
     "radix": true,
-    "semicolon": [true, "always"],
+    "semicolon": [false, "always"],
     "switch-default": true,
     "trailing-comma": [
       true,
@@ -113,23 +107,6 @@
       "property-declaration",
       "member-variable-declaration"
     ],
-    "typedef-whitespace": [
-      true,
-      {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
-      },
-      {
-        "call-signature": "space",
-        "index-signature": "space",
-        "parameter": "space",
-        "property-declaration": "space",
-        "variable-declaration": "space"
-      }
-    ],
     "use-isnan": true,
     "use-strict": [
       false,
@@ -141,13 +118,6 @@
       "check-format",
       "allow-leading-underscore",
       "ban-keywords"
-    ],
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-type"
     ]
   }
 }
