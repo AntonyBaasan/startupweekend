@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 //=========================================================
@@ -16,7 +17,6 @@ const ENV_TEST = NODE_ENV === 'test';
 
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
-
 
 //=========================================================
 //  CONFIG
@@ -35,6 +35,7 @@ config.module = {
   loaders: [
     {test: /\.ts$/, loader: 'ts', exclude: /node_modules/},
     {test: /\.html$/, loader: 'raw'},
+    {test: /\.txt$/, loader: 'raw'},
     {test: /\.scss$/, loader: 'raw!postcss!sass', exclude: path.resolve('src/views/common/styles'), include: path.resolve('src/views')}
   ]
 };
@@ -106,7 +107,8 @@ if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
         hash: true,
         inject: 'body',
         template: './src/index.html'
-      })
+      }),
+      new CopyWebpackPlugin([{context: './src', from: 'assets/**/*' },])
   );
 }
 

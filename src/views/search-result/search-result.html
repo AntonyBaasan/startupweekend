@@ -1,1 +1,12 @@
 <div>Search result</div>
+
+<searchform></searchform>
+
+<div class="task-list">
+    <task-item
+        *ngFor="let task of taskItems$ | async"
+            [task]="task"
+            (remove)="remove.emit(task)"
+            (update)="update.emit({task: task, changes: $event})">
+    </task-item>
+</div>
