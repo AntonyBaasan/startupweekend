@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import import {SearchForm} from 'src/views/search-form';
+import {SearchForm} from 'src/views/search-form';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
