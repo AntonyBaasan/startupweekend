@@ -4,7 +4,7 @@
 # Calgary Startup Weekend 2016 project 
 
 
-original seed 
+Seed project: [https://github.com/r-park/todo-angular2-firebase](https://github.com/r-park/todo-angular2-firebase)
 
 Quick Start
 -----------
