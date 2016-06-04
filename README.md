@@ -6,6 +6,11 @@
 
 Seed project: [https://github.com/r-park/todo-angular2-firebase](https://github.com/r-park/todo-angular2-firebase)
 
+Team members
+------------
+
+
+
 Quick Start
 -----------
 
