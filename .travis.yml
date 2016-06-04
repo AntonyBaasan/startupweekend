@@ -19,7 +19,7 @@ script:
   - npm run build
 
 after_success:
-  - npm run build.prod
+  - npm run build
 
 # Deployment to Surge.sh
 deploy:
