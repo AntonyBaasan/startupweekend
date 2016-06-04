@@ -1,1 +1,1 @@
-export { MainPage } from './main';
+export { SearchForm } from './seachform';
