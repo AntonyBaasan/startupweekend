@@ -6,7 +6,6 @@ import { Tasks } from 'src/views/tasks';
 import { NavBar } from 'src/views/nav-bar';
 import { MainPage } from 'src/views/main';
 import { SearchResult } from 'src/views/search-result';
-import { Featured } from 'src/views/featured';
 import { AppHeader } from './app-header';
 
 
