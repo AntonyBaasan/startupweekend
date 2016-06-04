@@ -15,9 +15,7 @@ import { CanActivate } from '@angular/router-deprecated';
         // TaskList
     ],
     selector: 'navbar',
-    template: `
-        <div>HHEHHEHDH</div>
-    `
+    template: require ('./nav-bar.html')
 })
 
 // @CanActivate(() => AuthRouteHelper.requireAuth())
