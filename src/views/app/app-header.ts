@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import import {SearchForm} from 'src/views/search-form';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -11,15 +12,18 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
       <div class="g-row">
         <div class="g-col">
           <h1 class="header__title">{{projectTitle}}</h1>
-    
-          <ul class="header__links">
+		
+		<searchform></searchform>
+        
+		<ul class="header__links">
             <li *ngIf="authenticated"><a class="header__link" (click)="signOut.emit()" href="#">Sign out</a></li>
             <!--<li><a class="header__link header__link&#45;&#45;github" href="https://github.com/r-park/todo-angular2-firebase"></a></li>-->
           </ul>
         </div>
       </div>
     </header>
-  `
+  `,
+  directives: [SearchForm]
 })
 
 export class AppHeader {
