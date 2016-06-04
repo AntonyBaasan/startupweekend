@@ -1,31 +1,15 @@
-[![Build Status](https://travis-ci.org/r-park/todo-angular2-firebase.svg?branch=master)](https://travis-ci.org/r-park/todo-angular2-firebase)
+[![Build Status](https://travis-ci.org/antonybaasan/startupweekend.svg?branch=master)](https://travis-ci.org/antonybaasan/startupweekend)
 
 
-# Todo app with Angular2, AngularFire2, and Firebase
-A simple Todo app example built with **Angular2** and **AngularFire2**. The app features a **Firebase** backend with **OAuth** authentication. Try the demo at <a href="https://ng2-todo-app.firebaseapp.com" target="_blank">ng2-todo-app.firebaseapp.com</a>.
+# Calgary Startup Weekend 2016 project 
 
-- Angular2 `2.0.0-rc.1`
-- AngularFire2 `2.0.0-beta.0`
-- Firebase
-  - JSON Datastore
-  - OAuth authentication with GitHub, Google, and Twitter
-  - Hosting
-- RxJS
-- SASS
-- Typescript
-- Webpack
-  - Inlines external SCSS files
-  - Inlines external HTML templates
-  - Bundles and minifies release builds
-  - Injects style and script tags into index.html
 
+original seed 
 
 Quick Start
 -----------
 
 ```shell
-$ git clone https://github.com/r-park/todo-angular2-firebase.git
-$ cd todo-angular2-firebase
 $ npm install
 $ npm start
 ```
