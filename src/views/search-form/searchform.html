@@ -1,17 +1,21 @@
 <!-- search for rentals -->
-<div class="container text-center">
+<div class="container text-center" style="padding: 90px 0;">
 	<h1>What can we help you rent?</h1>
-<div class="row">
+<div class="row" style="padding: 40px 0;">
 <!--	<div class="col-lg-8"> -->
 	<div class="col-lg-8">
 		<form action="/search">
 			<div class="container">
-			<div class="form-group input-group-lg col-lg-8 col-lg-offset-2">
-				<input type="text" class="form-control col-lg-4" placeholder="e.g. Snowboard, Carpet Cleaner, etc..." queryString="query" >
-				<div style="margin-top: 15px; clear: both;">
-				<button type="submit" class="btn btn-primary btn-lg">Find</button> <button type="submit" class="btn btn-primary-outline btn-lg">Advanced Search</button>
+				<div class="form-group input-group-lg col-lg-8 col-lg-offset-2">
+					<div>
+						<input type="text" class="form-control col-lg-4"
+							   placeholder="e.g. Carpet Cleaner in Calgary" queryString="query">
+					</div>
+					<div style="margin-top: 60px; clear: both;">
+						<button type="submit" class="btn btn-primary btn-lg">Find</button>
+						<button type="submit" class="btn btn-primary-outline btn-lg">Advanced Search</button>
+					</div>
 				</div>
-			</div>
 			</div>
 	<!--		Price Range:
 			<input type="int" priceFilter="price">
