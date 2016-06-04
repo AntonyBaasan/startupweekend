@@ -25,6 +25,6 @@ script:
 deploy:
   provider: surge
   project: ./target
-  domain: startupweekend-antony.surge.sh
+  domain: rentyourstuff.surge.sh
 #  on: ProdBranch #default is master branch
   skip_cleanup: true #will not clean after testing(want to take test build res)
