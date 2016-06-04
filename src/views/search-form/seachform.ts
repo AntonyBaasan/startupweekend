@@ -14,4 +14,11 @@ import { AuthRouteHelper, AuthService } from 'src/core/auth';
 @CanActivate(() => AuthRouteHelper.requireUnauth())
 
 export class SearchForm {
+	
+visible: boolean
+
+clickAdvanced(){
+	this.visible = !this.visible;	
+}	
+
 }
