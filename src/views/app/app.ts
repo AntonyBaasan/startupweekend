@@ -11,7 +11,7 @@ import { AppHeader } from './app-header';
 
 @RouteConfig([
   new Route({path: '/', component: MainPage, name: 'MainPage'}),
-  new Route({path: '/search', component: SearchResult, name: 'SearchResult'}),
+  new Route({path: '/search', component: SearchResult, name: 'Search'}),
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'})
 ])

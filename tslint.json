@@ -23,7 +23,7 @@
     "eofline": true,
     "forin": true,
     "indent": [
-      true,
+      false,
       "spaces"
     ],
     "interface-name": [
@@ -90,7 +90,7 @@
     "semicolon": [false, "always"],
     "switch-default": true,
     "trailing-comma": [
-      true,
+      false,
       {
         "multiline": "never",
         "singleline": "never"

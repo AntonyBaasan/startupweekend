@@ -13,7 +13,7 @@ import {SearchForm} from 'src/views/search-form';
         <div class="g-col">
           <h1 class="header__title">{{projectTitle}}</h1>
 		
-		<searchform></searchform>
+<!--		<searchform></searchform> -->
         
 		<ul class="header__links">
             <li *ngIf="authenticated"><a class="header__link" (click)="signOut.emit()" href="#">Sign out</a></li>
