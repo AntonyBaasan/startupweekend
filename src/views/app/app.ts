@@ -4,11 +4,13 @@ import { AuthService } from 'src/core/auth';
 import { SignIn } from 'src/views/sign-in';
 import { Tasks } from 'src/views/tasks';
 import { NavBar } from 'src/views/nav-bar';
+import { MainPage } from 'src/views/main';
 import { AppHeader } from './app-header';
 
 
 @RouteConfig([
-  new Route({path: '/', component: SignIn, name: 'SignIn'}),
+  new Route({path: '/', component: MainPage, name: 'MainPage'}),
+  new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'})
 ])
 

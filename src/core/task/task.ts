@@ -9,6 +9,9 @@ export class Task implements ITask {
   completed: boolean = false;
   createdAt: number = Firebase.ServerValue.TIMESTAMP;
   title: string;
+  description: string;
+  category: string;
+  price: number;
 
   constructor(title: string) {
     this.title = title;
