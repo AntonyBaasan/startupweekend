@@ -100,7 +100,13 @@ if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
       hash: true,
       inject: 'body',
       template: './src/index.html'
-    })
+    }),
+      new HtmlWebpackPlugin({
+        filename: '200.html',
+        hash: true,
+        inject: 'body',
+        template: './src/index.html'
+      })
   );
 }
 
