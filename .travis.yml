@@ -4,7 +4,7 @@ dist: trusty
 language: node_js
 
 node_js:
-  - 5.2
+  - 6.0
 
 before_install:
   - export CHROME_BIN=chromium-browser
@@ -18,15 +18,13 @@ install:
 script:
   - npm run build
 
-deploy:
-  provider: script
-  script: ./deploy.sh
-  skip_cleanup: true
-  on:
-    branch: master
-    tags: true
+after_success:
+  - npm run build.prod
 
-notifications:
-  email:
-    on_failure: change
-    on_success: change
+# Deployment to Surge.sh
+deploy:
+  provider: surge
+  project: ./target
+  domain: startup-antony.surge.sh
+#  on: ProdBranch #default is master branch
+  skip_cleanup: true #will not clean after testing(want to take test build res)
