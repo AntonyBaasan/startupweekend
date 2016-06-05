@@ -11,7 +11,6 @@ import {SearchForm} from 'src/views/search-form';
     <header class="header">
       <div class="g-row">
         <div class="g-col">
-          <h1 class="header__title">{{projectTitle}}</h1>
 		
 <!--		<searchform></searchform> -->
         
