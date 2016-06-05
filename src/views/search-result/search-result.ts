@@ -35,9 +35,14 @@ export class SearchResult implements OnInit {
     this.activeFilter = params.get('filter');
   }
 
-  ngOnInit() {
-    this.searchText = this.params.get('search');
+  ngOnInit():void {
+    this.searchText = this.params.get('search') as string;
 
+    // this.showResult();
   }
+
+  // showResult(){
+  //
+  // }
 
 }
