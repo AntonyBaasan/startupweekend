@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { ITask } from 'src/core/task';
 import { Task } from 'src/core/task/task';
+import {AuthService} from "../../../core/auth/auth-service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -108,19 +109,17 @@ export class TaskForm {
   xcoord: number = 0;
   ycoord: number = 0;
 
-
-    // constructor(params: RouteParams) {
-    //     this.activeFilter = params.get('filter');
-    // }
-
+  constructor(private auth: AuthService) {}
     
-    clear(): void {
+  clear(): void {
     this.name = '';
   }
 
   submit(): void {
-	
-	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord, this.picture);
+
+    console.log("this.auth.id:  "+this.auth.id);
+
+	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord, this.picture, this.auth.id);
 	
 	console.log(this.picture);
 	
