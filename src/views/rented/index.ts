@@ -1,0 +1,1 @@
+export { Rented } from './rented';
