@@ -15,24 +15,32 @@
   </div>
 
   <div class="cell">
-    <div
+    
+	<div
       *ngIf="!editing"
       class="task-item__title"
       tabindex="0">
       {{ task.name }}
+	  Price 
+	  {{ task.price}}
     </div>
 
     <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
-      <input
+      
+	  <input
         (blur)="stopEditing()"
         (keyup.escape)="stopEditing()"
-        ngControl="title"
-        [(ngModel)]="title"
+        ngControl="name"
+        [(ngModel)]="name"
         autocomplete="off"
         autofocus
         class="task-item__input"
         type="text">
-    </form>
+	<input 
+		ngControl ="price"
+		[(ngModel)]="price"
+		type ="text">
+	</form>
   </div>
 
   <div class="cell">
@@ -44,15 +52,19 @@
       type="button">
       <span class="icon material-icons">&#xe14c;</span>
     </button>
-    <button
+    
+	<!-- 
+	<button
       *ngIf="!editing"
       (click)="editTitle()"
       aria-label="Edit task title"
       class="task-item__button"
       type="button">
       <span class="icon material-icons">edit</span>
-    </button>
-    <button
+     </button>
+	 -->
+    
+	<button
       *ngIf="!editing"
       (click)="remove.emit()"
       aria-label="Delete task"

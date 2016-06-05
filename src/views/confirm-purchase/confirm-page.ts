@@ -8,11 +8,14 @@ import { Autofocus } from 'src/views/common';
   directives: [
     Autofocus
   ],
-  selector: 'task-item',
+  selector: 'confirm-page',
   styles: [
-    require('./task-item.scss')
+    require('./confirm-page.scss')
   ],
-  template: require('./task-item.html')
+  template: require('./confirm-page')
 })
 
-export class
+export class confirm-page
+{
+	
+}
