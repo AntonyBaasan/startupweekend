@@ -44,6 +44,12 @@ export class AuthService {
     });
   }
 
+  signInWithFacebook(): Promise<FirebaseAuthState> {
+    return this.auth$.login({
+      provider: AuthProviders.Facebook
+    });
+  }
+
   signOut(): void {
     this.auth$.logout();
   }

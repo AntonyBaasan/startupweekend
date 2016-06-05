@@ -7,6 +7,19 @@
 //  SIGN-IN
 //===================================================================
 
+@import
+"~minx/src/settings",
+"~minx/src/functions",
+"~minx/src/mixins";
+
+//===================================================================
+//  APP-HEADER
+//===================================================================
+
+.sign-in_github {
+  @include fa-icon(github);
+}
+
 .sign-in {
   margin-top: 90px;
   max-width: 300px;

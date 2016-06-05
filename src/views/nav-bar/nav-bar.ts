@@ -4,7 +4,7 @@
 import { Component, Input } from '@angular/core';
 import { CanActivate } from '@angular/router-deprecated';
 import { AuthRouteHelper, AuthService } from 'src/core/auth';
-import { Router }              from '@angular/router-deprecated';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 // import { TaskService } from 'src/core/task';
 // import { TaskForm } from './task-form/task-form';
 // import { TaskList } from './task-list/task-list';
@@ -14,7 +14,8 @@ import { Router }              from '@angular/router-deprecated';
 @Component({
     directives: [
         // TaskForm,
-        // TaskList
+        // TaskList,
+        ROUTER_DIRECTIVES
     ],
     selector: 'navbar',
     template: require ('./nav-bar.html'),

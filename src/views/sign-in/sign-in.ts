@@ -12,8 +12,9 @@ import { AuthRouteHelper, AuthService } from 'src/core/auth';
     <div class="g-row sign-in">
       <div class="g-col">
         <h1 class="sign-in__heading">Sign in</h1>
+        <button class="sign-in__button hvr-glow" (click)="signInWithFacebook()" type="button">Facebook</button>
         <button class="sign-in__button hvr-glow" (click)="signInWithGithub()" type="button">GitHub</button>
-        <button class="sign-in__button hvr-glow" (click)="signInWithGoogle()" type="button">Google</button>
+        <!--<button class="sign-in__button hvr-glow" (click)="signInWithGoogle()" type="button">Google</button>-->
         <button class="sign-in__button hvr-glow" (click)="signInWithTwitter()" type="button">Twitter</button>
       </div>
     </div>
@@ -40,7 +41,13 @@ export class SignIn {
       .then(() => this.postSignIn());
   }
 
+  signInWithFacebook(): void {
+    this.auth.signInWithFacebook()
+        .then(() => this.postSignIn());
+  }
+
   private postSignIn(): void {
-    this.router.navigate(['/Tasks']);
+    // this.router.navigate(['/Tasks']);
+    window.location.href = '/tasks';
   }
 }
