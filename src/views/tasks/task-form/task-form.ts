@@ -94,8 +94,8 @@ export class TaskForm {
 
   submit(): void {
     const title: string = this.title.trim();
-	
-	var allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord)
+
+	const allinfo : ITask = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord)
 	
 	
     if (title.length) {

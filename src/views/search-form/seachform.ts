@@ -15,10 +15,10 @@ import { AuthRouteHelper, AuthService } from 'src/core/auth';
 
 export class SearchForm {
 	
-visible: boolean
+  visible: boolean
 
-clickAdvanced(){
+  clickAdvanced():void{
 	this.visible = !this.visible;	
-}	
+  }
 
 }

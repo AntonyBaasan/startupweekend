@@ -5,19 +5,26 @@ export interface ITask {
   completed: boolean;
   createdAt: number;
   title: string;
+    picture: string ;
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    contact: string;
+    locations: Gps;
 }
 
 export class Task implements ITask {
   completed: boolean = false;
   createdAt: number = Firebase.ServerValue.TIMESTAMP;
-  picture: string ;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  contact: string;
-  locations: Gps;
-  title: string;
+    title: string;
+    picture: string ;
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    contact: string;
+    locations: Gps;
 
   constructor(name: string, 
 			description: string, 
