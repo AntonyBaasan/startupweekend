@@ -22,7 +22,6 @@ import {AuthService} from "../../../core/auth/auth-service";
   ],
   template: `
 <div class="container" >
-    <h2 style="margin-top: 20px;">Stuff I rented</h2>
     <div class="row" style="margin-top: 45px;">
 
     <div class="task-list">

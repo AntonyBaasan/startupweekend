@@ -2,10 +2,10 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <img class="card-img-top" src="/assets/images/house.jpeg" alt="Oakley Snowboard">
+                    <img class="card-img-top" src="{{ task.url }}" alt="Oakley Snowboard">
                     <div class="card-block">
-                        <h3 class="card-title">Awesome house at Beverly Hills</h3>
-                        <p class="card-text">Description</p>
+                        <h3 class="card-title">{{ task.name }}</h3>
+                        <p class="card-text">{{ task.description }}</p>
                         <a href="#" class="card-link">Return</a>
                         <!--<a href="confirm" class="btn btn-primary pull-right">Rent $18/day</a>-->
                         <button
@@ -46,80 +46,80 @@
 
 
 
-<div
-  [ngClass]="{'task-item--completed': task.completed, 'task-item--editing': editing}"
-  class="task-item row"
-  tabindex="0">
+<!--<div-->
+  <!--[ngClass]="{'task-item&#45;&#45;completed': task.completed, 'task-item&#45;&#45;editing': editing}"-->
+  <!--class="task-item row"-->
+  <!--tabindex="0">-->
 
-  <div class="cell">
-    <button
-      *ngIf="!editing"
-      (click)="toggleStatus()"
-      aria-label="Mark task as completed"
-      class="task-item__button"
-      type="button">
-      <span class="icon material-icons" [ngClass]="{'icon--active': task.completed}">done</span>
-    </button>
-  </div>
+  <!--<div class="cell">-->
+    <!--<button-->
+      <!--*ngIf="!editing"-->
+      <!--(click)="toggleStatus()"-->
+      <!--aria-label="Mark task as completed"-->
+      <!--class="task-item__button"-->
+      <!--type="button">-->
+      <!--<span class="icon material-icons" [ngClass]="{'icon&#45;&#45;active': task.completed}">done</span>-->
+    <!--</button>-->
+  <!--</div>-->
 
-  <div class="cell">
-    
-	<div
-      *ngIf="!editing"
-      class="task-item__title"
-      tabindex="0">
-      {{ task.name }}
-	  Price {{ task.price}}
+  <!--<div class="cell">-->
+    <!---->
+	<!--<div-->
+      <!--*ngIf="!editing"-->
+      <!--class="task-item__title"-->
+      <!--tabindex="0">-->
+      <!--{{ task.name }}-->
+	  <!--Price {{ task.price}}-->
 
-    </div><span class="label label-info pull-right" style="margin-top: 1em;" >{{task.completed ? "Rented":""}}</span>
+    <!--</div><span class="label label-info pull-right" style="margin-top: 1em;" >{{task.completed ? "Rented":""}}</span>-->
 
 
-    <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
-      
-	  <input
-        (blur)="stopEditing()"
-        (keyup.escape)="stopEditing()"
-        ngControl="name"
-        [(ngModel)]="name"
-        autocomplete="off"
-        autofocus
-        class="task-item__input"
-        type="text">
-	<input 
-		ngControl ="price"
-		[(ngModel)]="price"
-		type ="text">
-	</form>
-  </div>
+    <!--<form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>-->
+      <!---->
+	  <!--<input-->
+        <!--(blur)="stopEditing()"-->
+        <!--(keyup.escape)="stopEditing()"-->
+        <!--ngControl="name"-->
+        <!--[(ngModel)]="name"-->
+        <!--autocomplete="off"-->
+        <!--autofocus-->
+        <!--class="task-item__input"-->
+        <!--type="text">-->
+	<!--<input -->
+		<!--ngControl ="price"-->
+		<!--[(ngModel)]="price"-->
+		<!--type ="text">-->
+	<!--</form>-->
+  <!--</div>-->
 
-  <div class="cell">
-    <button
-      *ngIf="editing"
-      (click)="stopEditing()"
-      aria-label="Cancel editing"
-      class="task-item__button"
-      type="button">
-      <span class="icon material-icons">&#xe14c;</span>
-    </button>
-    
-	<!-- 
-	<button
-      *ngIf="!editing"
-      (click)="editTitle()"
-      aria-label="Edit task title"
-      class="task-item__button"
-      type="button">
-      <span class="icon material-icons">edit</span>
-     </button>
-	 -->
-    
-	<button
-      *ngIf="!editing"
-      (click)="remove.emit()"
-      aria-label="Delete task"
-      class="task-item__button"
-      type="button">
-      <span class="icon material-icons">delete</span>
-    </button>
-  </div>
-</div>
+  <!--<div class="cell">-->
+    <!--<button-->
+      <!--*ngIf="editing"-->
+      <!--(click)="stopEditing()"-->
+      <!--aria-label="Cancel editing"-->
+      <!--class="task-item__button"-->
+      <!--type="button">-->
+      <!--<span class="icon material-icons">&#xe14c;</span>-->
+    <!--</button>-->
+    <!---->
+	<!--&lt;!&ndash; -->
+	<!--<button-->
+      <!--*ngIf="!editing"-->
+      <!--(click)="editTitle()"-->
+      <!--aria-label="Edit task title"-->
+      <!--class="task-item__button"-->
+      <!--type="button">-->
+      <!--<span class="icon material-icons">edit</span>-->
+     <!--</button>-->
+	 <!--&ndash;&gt;-->
+    <!---->
+	<!--<button-->
+      <!--*ngIf="!editing"-->
+      <!--(click)="remove.emit()"-->
+      <!--aria-label="Delete task"-->
+      <!--class="task-item__button"-->
+      <!--type="button">-->
+      <!--<span class="icon material-icons">delete</span>-->
+    <!--</button>-->
+  <!--</div>-->
+<!--</div>-->
