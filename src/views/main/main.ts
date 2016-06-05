@@ -3,6 +3,7 @@ import {CanActivate, Router} from '@angular/router-deprecated';
 import {AuthRouteHelper, AuthService} from 'src/core/auth';
 import {SearchForm} from 'src/views/search-form';
 import {Featured} from 'src/views/featured-img';
+import {CategoryDisplay} from 'src/views/category-display';
 import {Footer} from 'src/views/footer';
 
 
@@ -12,7 +13,7 @@ import {Footer} from 'src/views/footer';
         require('./main.scss')
     ],
     template: require('./main.html'),
-    directives: [SearchForm,Featured,Footer]
+    directives: [SearchForm,Featured,Footer,CategoryDisplay]
 })
 
 export class MainPage {
