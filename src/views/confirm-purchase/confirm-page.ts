@@ -17,12 +17,17 @@ import { Autofocus } from 'src/views/common';
 
 export class ConfirmPage
 {
-	days: number=0;
+	days: number=3;
 	price: number=18;
 	priceTot: number;
 	
 	getPrice()
 	{
-		this.priceTot = 18*this.price;
+		this.priceTot = 18*this.days;
+	}
+	
+	buyItem()
+	{
+		
 	}
 }

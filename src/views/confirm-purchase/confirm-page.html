@@ -1,18 +1,25 @@
 <title> Confirm purchase </title>
-<h1> You are renting Oakley Snowboard </h1>
+<h1> You are renting Oakley Snowboard for $18/day</h1>
+<br>
 <div>
-<h2> Would you like to insure your rental for</h2>
+<h2> Would you like to insure your rental?</h2>
 	<select id="insurance" class="form-control" insurance="insurance">
 		<option value="none">No insurance</option>
 		<option value="normal">Regular insurance (up to $200)</option>
 		<option value="enhanced"> Enhanced insurance (up to $500)</option>
 		<option value="premium">Premium insurance (up to $1000)</option>
 	</select>
-	
+<br>	
 <h2> How many days would you like to rent it for? </h2>
 <input type="number" >	
 </div>
 
-<button id="getPrice" (click)="getPrice()" >
-<h2 id="price" > Total Price </h2> 
-<label> {{priceTot}} </label>
+<br>
+<div>
+<h2 id="price" > Total Price: {{priceTot}} </h2>
+</div>
+
+<div>
+<a (click)="getPrice()" class="btn btn-primary pull-left">Get Price</a>
+<a href="/confirm/#" class="btn btn-primary pull-left">Buy Item</a>
+</div>
