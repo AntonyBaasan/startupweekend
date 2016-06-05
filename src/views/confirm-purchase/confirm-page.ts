@@ -15,7 +15,7 @@ import { Autofocus } from 'src/views/common';
   template: require('./confirm-page')
 })
 
-export class confirm-page
+export class ConfirmPage
 {
-	
+	@Input() task: ITask;
 }
