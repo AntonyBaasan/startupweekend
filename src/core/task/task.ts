@@ -12,7 +12,7 @@ export interface ITask {
     price: number;
     contact: string;
     locations: Gps;
-    user_id: string;
+    userId: string;
 }
 
 export class Task implements ITask {
@@ -26,7 +26,7 @@ export class Task implements ITask {
     price: number;
     contact: string;
     locations: Gps;
-    user_id: string;
+    userId: string;
 
 
     constructor(name: string,
@@ -37,7 +37,7 @@ export class Task implements ITask {
 			xcoord: number, 
 			ycoord: number,
               picture: URL,
-              user_id: string
+                userId: string
 ) {
     this.picture = picture
 	this.name = name;
@@ -45,6 +45,6 @@ export class Task implements ITask {
 	this.category = category;
 	this.price = price;
 	this.locations = new Gps(xcoord, ycoord);
-      this.user_id = user_id;
+      this.userId = userId;
   }
 }

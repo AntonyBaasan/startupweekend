@@ -10,11 +10,10 @@ import { ITask, Task } from './task';
 export class TaskService {
   taskItems$: FirebaseListObservable<ITask[]>;
 
-  constructor(private af: AngularFire, auth: AuthService) {
-//   this.taskItems$ = af.list(`/tasks/${auth.id}`) as FirebaseListObservable<ITask[]>; q
-     this.taskItems$ = af.list(`/tasks/`) as FirebaseListObservable<ITask[]>;
+  constructor(af: AngularFire, auth: AuthService) {
+     this.taskItems$ = af.list(`/rents/`) as FirebaseListObservable<ITask[]>;
 
-    console.log("this.taskItems$: "+this.taskItems$);
+      console.log("this.taskItems$: "+this.taskItems$);
   }
 
   createTask(task : ITask): Promise<any> {

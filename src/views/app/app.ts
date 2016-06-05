@@ -7,8 +7,8 @@ import { NavBar } from 'src/views/nav-bar';
 import { MainPage } from 'src/views/main';
 import { SearchResult } from 'src/views/search-result';
 import { Rented } from 'src/views/rented';
-import { PricingPage } from 'src/views/pricing';
 import { AppHeader } from './app-header';
+import { ConfirmPage } from 'src/views/confirm-purchase';
 
 
 @RouteConfig([
@@ -16,8 +16,8 @@ import { AppHeader } from './app-header';
   new Route({path: '/search', component: SearchResult, name: 'Search'}),
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'}),
-  new Route({path: '/pricing', component: PricingPage, name: 'Pricing'}),
-  new Route({path: '/rented', component: Rented, name: 'Rented'})
+  new Route({path: '/rented', component: Rented, name: 'Rented'}),
+  new Route({path: '/confirm', component: ConfirmPage, name: 'ConfirmPage'})
 ])
 
 @Component({

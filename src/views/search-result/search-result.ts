@@ -31,18 +31,21 @@ export class SearchResult implements OnInit {
   searchText: string;
 
   constructor(private params: RouteParams, private taskService: TaskService) {
-    this.taskItems$ = taskService.taskItems$
+    this.taskItems$ = taskService.taskItems$;
     this.activeFilter = params.get('filter');
   }
 
   ngOnInit():void {
     this.searchText = this.params.get('search') as string;
-
-    // this.showResult();
   }
 
-  // showResult(){
-  //
-  // }
+  isMoreZero(n : number): boolean{
+    return n >= 0;
+  }
+
+  hasResult(): boolean{
+    // taskService.taskItems$
+    return true;
+  }
 
 }

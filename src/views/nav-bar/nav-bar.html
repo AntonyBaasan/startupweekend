@@ -7,20 +7,22 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="topFixedNavbar1">
-            <form class="navbar-form navbar-right" role="search" (submit)="search(searchText.value)">
+            <!-- <form class="navbar-form navbar-right" role="search" (submit)="search(searchText.value)">
                 <div class="form-group">
                     <input #searchText type="text" class="form-control" placeholder="Search Stuff">
                 </div>
                 <button type="submit" class="btn btn-default hvr-glow">GO</button>
-            </form>
+            </form> -->
 
             <ul *ngIf="!authenticated" class="nav navbar-nav navbar-right">
                 <!--<a href="/signin">Login</a>-->
+                <li><a href="/pricing">How it Works</a></li>
                 <li class="dropdown hvr-underline-from-center"><a href="/signin" class="dropdown-toggle" aria-expanded="false">Login</a>
                 </li>
             </ul>
 
             <ul *ngIf="authenticated" class="nav navbar-nav navbar-right">
+                <li><a href="/pricing">How it Works</a></li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Stuff<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a [routerLink]="['/Tasks']">My Stuff For Rent</a></li>
