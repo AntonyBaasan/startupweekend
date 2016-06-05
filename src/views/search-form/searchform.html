@@ -7,11 +7,11 @@
 		<form (submit)="search(searchInput.value)">
 			<div class="container">
 				<div class="form-group">
-					<div class="input-group-lg">
+					<div class="input-group-lg row">
 						<input type="text" class="form-control form-control-lg col-lg-4"
 							   placeholder="e.g. Bike Pump in Calgary" queryString="query" value="{{searchText}}" #searchInput>
 					</div>
-					<div id="advOpt" class="input-group-lg" style="margin-top: 60px; clear: both;" *ngIf=visible>
+					<div id="advOpt" class="input-group-lg row" style="margin-top: 15px; clear: both;" *ngIf=visible>
 					<label for="price-range">Price Range:</label>
 					<input type="int" id="price-range" priceFilter="price" placeholder="From"> - <input type="int" id="price-range-to" priceFilter="price" placeholder="To"><br />
 						<div class="col-lg-8">
@@ -27,9 +27,10 @@
 					</select>
 						</div></div>
 				</div>						
-					<div style="margin-top: 15px; clear: both; float: left;">
+					<div class="row" style="margin-top: 15px;">
 						<button type="submit" class="btn btn-primary btn-lg hvr-glow">Find Stuff</button>
 						<button type="button" class="btn btn-primary-outline btn-lg hvr-glow" (click)="clickAdvanced()">Advanced Search</button>
+						<button type="button" class="btn btn-primary-outline btn-lg hvr-glow pull-right" (click)="clickPostStuff()">Post Stuff</button>
 					</div>
 				</div>
 			</div>
