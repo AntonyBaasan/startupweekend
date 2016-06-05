@@ -4,6 +4,7 @@ import { FirebaseListObservable } from 'angularfire2';
 import { ITask } from 'src/core/task';
 import { TaskItem } from '../task-item/task-item';
 import { TaskListFilterPipe } from './task-list-filter-pipe';
+import {AuthService} from "../../../core/auth/auth-service";
 
 
 @Component({
@@ -27,11 +28,13 @@ import { TaskListFilterPipe } from './task-list-filter-pipe';
     </ul>
     
     <div class="task-list">
-      <task-item
-        *ngFor="let task of taskItems$ | async | filterTasks:activeFilter"
-        [task]="task"
-        (remove)="remove.emit(task)"
-        (update)="update.emit({task: task, changes: $event})"></task-item>
+      <div *ngFor="let task of taskItems$ | async | filterTasks:activeFilter">
+        <!--{{getUserID()}}::{{task.user_id}}-->
+        <task-item *ngIf="getUserID() == task.user_id" [task]="task"          
+            (remove)="remove.emit(task)"
+            (update)="update.emit({task: task, changes: $event})">          
+        </task-item>
+       </div>
     </div>
   `
 })
@@ -43,7 +46,11 @@ export class TaskList {
 
   activeFilter: string;
 
-  constructor(params: RouteParams) {
+  constructor(private auth: AuthService, params: RouteParams) {
     this.activeFilter = params.get('filter');
+  }
+
+  getUserID():string{
+    return this.auth.id;
   }
 }

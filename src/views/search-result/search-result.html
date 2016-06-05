@@ -2,7 +2,9 @@
 
 <div class="task-list">
 	<div *ngFor="let task of taskItems$ | async">
-		<div class="container">
+		{{task.name.indexOf(searchText)}}
+
+		<div class="container" *ngIf="isMoreZero(task.name.indexOf(searchText))">
 			<div class="row"> 
 				<div *ngFor="let task of taskItems$ | async">
 					<div class="col-md-4">

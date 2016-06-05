@@ -38,11 +38,15 @@ export class SearchResult implements OnInit {
   ngOnInit():void {
     this.searchText = this.params.get('search') as string;
 
-    // this.showResult();
+    this.showResult();
   }
 
-  // showResult(){
-  //
-  // }
+  showResult(){
+
+  }
+
+  isMoreZero(n : number): boolean{
+    return n >= 0;
+  }
 
 }
