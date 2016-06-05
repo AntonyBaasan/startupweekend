@@ -6,6 +6,7 @@ import { Tasks } from 'src/views/tasks';
 import { NavBar } from 'src/views/nav-bar';
 import { MainPage } from 'src/views/main';
 import { SearchResult } from 'src/views/search-result';
+import { Rented } from 'src/views/rented';
 import { AppHeader } from './app-header';
 
 
@@ -14,6 +15,7 @@ import { AppHeader } from './app-header';
   new Route({path: '/search', component: SearchResult, name: 'Search'}),
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'})
+  new Route({path: '/rented', component: Rented, name: 'Rented'})
 ])
 
 @Component({
