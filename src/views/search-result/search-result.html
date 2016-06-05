@@ -1,6 +1,7 @@
 <searchform-small [searchText]="searchText"></searchform-small>
 
 <div class="task-list">
+<<<<<<< HEAD
 	<div *ngFor="let task of taskItems$ | async">
 		<div class="container">
 			<div class="row"> 
@@ -22,4 +23,10 @@
 			</div>
 		</div>
 	</div>
+=======
+    <div *ngFor="let task of taskItems$ | async">
+        <div>{{task.title}}</div>
+
+    </div>
+>>>>>>> 89dc846a1280ab41dc20ca906ec776a418ce33dc
 </div>
