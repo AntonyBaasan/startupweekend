@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CanActivate, Router } from '@angular/router-deprecated';
 import { AuthRouteHelper, AuthService } from 'src/core/auth';
 
@@ -16,6 +16,8 @@ import { AuthRouteHelper, AuthService } from 'src/core/auth';
 export class SearchForm {
 	
   visible: boolean
+
+  @Input() searchText: string;
 
   clickAdvanced():void{
 	this.visible = !this.visible;	

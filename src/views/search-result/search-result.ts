@@ -1,13 +1,10 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { RouterLink, RouteParams } from '@angular/router-deprecated';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { RouterLink, RouteParams, Router } from '@angular/router-deprecated';
 import { AuthRouteHelper, AuthService } from 'src/core/auth';
-
 import { FirebaseListObservable } from 'angularfire2';
 import { ITask } from 'src/core/task';
 import { TaskItem } from 'src/views/tasks/task-item/task-item';
-import { TaskListFilterPipe } from 'src/views/tasks/task-list/task-list-filter-pipe';
 import { TaskService } from 'src/core/task';
-
 import { SearchForm } from 'src/views/search-form';
 
 @Component({
@@ -21,10 +18,9 @@ import { SearchForm } from 'src/views/search-form';
     TaskItem,
       SearchForm
   ],
-
 })
 
-export class SearchResult {
+export class SearchResult implements OnInit {
 
   // constructor(private taskService: TaskService) {}
   @Input() taskItems$: FirebaseListObservable<ITask[]>;
@@ -32,10 +28,16 @@ export class SearchResult {
   @Output() update: EventEmitter<any> = new EventEmitter(false);
 
   activeFilter: string;
+  searchText: string;
 
-  constructor( params: RouteParams, private taskService: TaskService) {
+  constructor(private params: RouteParams, private taskService: TaskService) {
     this.taskItems$ = taskService.taskItems$
     this.activeFilter = params.get('filter');
+  }
+
+  ngOnInit() {
+    this.searchText = this.params.get('search');
+
   }
 
 }

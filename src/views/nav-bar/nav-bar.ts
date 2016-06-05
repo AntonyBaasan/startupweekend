@@ -35,7 +35,7 @@ export class NavBar {
     }
 
     search(searchText: string):void{
-        this.router.navigate(['/Search', searchText]);
+        this.router.navigate(['/Search', { search: searchText }]);
     }
 
     signOut(): void {
