@@ -1,9 +1,29 @@
 <!-- Main page -->
-<div class="container-fluid" style="padding: 0;">
-    <searchform></searchform>
+<div class="main-wrapper">
+<div class="bg"></div>
+<div class="jumbotron">
+    <div class="container-fluid" style="padding: 0;">
+        <searchform></searchform>
+    </div>
+</div>
+
+<div class="container-fluid main-home" style="padding: 0;">
+
     <div class="home-features">
     <featured-imgs></featured-imgs>
     </div>
     <category-display></category-display>
     <footer></footer>
 </div>
+</div>
+
+<script type="text/javascript">var jumboHeight = $('.jumbotron').outerHeight();
+function parallax(){
+    var scrolled = $(window).scrollTop();
+    $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+}
+
+$(window).scroll(function(e){
+    parallax();
+});
+</script>

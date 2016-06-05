@@ -24,6 +24,7 @@ export class TaskItem {
   name: string = '';
   price: number = 0;
   picture: URL='';
+  completed: boolean = true;
 
   editname(): void {
     this.editing = true;
