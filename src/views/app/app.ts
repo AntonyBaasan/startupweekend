@@ -9,6 +9,7 @@ import { SearchResult } from 'src/views/search-result';
 import { Rented } from 'src/views/rented';
 import { AppHeader } from './app-header';
 import { ConfirmPage } from 'src/views/confirm-purchase';
+import { PricingPage } from 'src/views/pricing';
 
 
 @RouteConfig([
@@ -17,6 +18,7 @@ import { ConfirmPage } from 'src/views/confirm-purchase';
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'}),
   new Route({path: '/rented', component: Rented, name: 'Rented'}),
+  new Route({path: '/pricing', component: PricingPage, name: 'Pricing'}),
   new Route({path: '/confirm', component: ConfirmPage, name: 'ConfirmPage'})
 ])
 
