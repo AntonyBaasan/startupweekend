@@ -1,3 +1,51 @@
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img class="card-img-top" src="/assets/images/house.jpeg" alt="Oakley Snowboard">
+                    <div class="card-block">
+                        <h3 class="card-title">Awesome house at Beverly Hills</h3>
+                        <p class="card-text">Description</p>
+                        <a href="#" class="card-link">Return</a>
+                        <!--<a href="confirm" class="btn btn-primary pull-right">Rent $18/day</a>-->
+                        <button
+                            *ngIf="!editing"
+                            (click)="remove.emit()"
+                            aria-label="Delete task"
+                            class="task-item__button"
+                            type="button">
+                            <span class="icon material-icons">delete</span>
+                            </button>
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div
   [ngClass]="{'task-item--completed': task.completed, 'task-item--editing': editing}"
   class="task-item row"

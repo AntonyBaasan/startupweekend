@@ -21,13 +21,13 @@ export class ConfirmPage
 	price: number=18;
 	priceTot: number;
 	
-	getPrice()
+	getPrice(): void
 	{
 		this.priceTot = 18*this.days;
 	}
 	
-	buyItem()
+	buyItem(): void
 	{
-		
+		console.log("buyItem()");
 	}
 }

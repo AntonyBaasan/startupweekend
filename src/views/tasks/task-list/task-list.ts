@@ -21,12 +21,10 @@ import {AuthService} from "../../../core/auth/auth-service";
     require('./task-list.scss')
   ],
   template: `
-    <ul class="task-filters">
-      <!--<li><a [class.active]="!activeFilter" [routerLink]="['/Tasks']">View All</a></li>-->
-      <!--<li><a [class.active]="activeFilter == 'active'" [routerLink]="['/Tasks', {filter: 'active'}]">Active</a></li>-->
-      <!--<li><a [class.active]="activeFilter == 'completed'" [routerLink]="['/Tasks', {filter: 'completed'}]">Completed</a></li>-->
-    </ul>
-    
+<div class="container" >
+    <h2 style="margin-top: 20px;">Stuff I rented</h2>
+    <div class="row" style="margin-top: 45px;">
+
     <div class="task-list">
       <div *ngFor="let task of taskItems$ | async | filterTasks:activeFilter">
         <!--{{getUserID()}}::{{task.user_id}}-->
@@ -36,6 +34,27 @@ import {AuthService} from "../../../core/auth/auth-service";
         </task-item>
        </div>
     </div>
+
+    </div>
+</div>
+
+
+
+    <!--<ul class="task-filters">-->
+      <!--<li><a [class.active]="!activeFilter" [routerLink]="['/Tasks']">View All</a></li>-->
+      <!--<li><a [class.active]="activeFilter == 'active'" [routerLink]="['/Tasks', {filter: 'active'}]">Active</a></li>-->
+      <!--<li><a [class.active]="activeFilter == 'completed'" [routerLink]="['/Tasks', {filter: 'completed'}]">Completed</a></li>-->
+    <!--</ul>-->
+    
+    <!--<div class="task-list">-->
+      <!--<div *ngFor="let task of taskItems$ | async | filterTasks:activeFilter">-->
+        <!--&lt;!&ndash;{{getUserID()}}::{{task.user_id}}&ndash;&gt;-->
+        <!--<task-item *ngIf="getUserID() == task.userId" [task]="task"          -->
+            <!--(remove)="remove.emit(task)"-->
+            <!--(update)="update.emit({task: task, changes: $event})">          -->
+        <!--</task-item>-->
+       <!--</div>-->
+    <!--</div>-->
   `
 })
 
