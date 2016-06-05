@@ -12,10 +12,10 @@ import { AuthRouteHelper, AuthService } from 'src/core/auth';
     <div class="g-row sign-in">
       <div class="g-col">
         <h1 class="sign-in__heading">Sign in</h1>
-        <button class="sign-in__button hvr-glow" (click)="signInWithFacebook()" type="button">Facebook</button>
         <button class="sign-in__button hvr-glow" (click)="signInWithGithub()" type="button">GitHub</button>
         <!--<button class="sign-in__button hvr-glow" (click)="signInWithGoogle()" type="button">Google</button>-->
         <button class="sign-in__button hvr-glow" (click)="signInWithTwitter()" type="button">Twitter</button>
+        <button class="sign-in__button hvr-glow" (click)="signInWithFacebook()" type="button">Facebook</button>
       </div>
     </div>
   `

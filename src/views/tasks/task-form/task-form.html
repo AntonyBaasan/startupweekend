@@ -1,0 +1,109 @@
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Post Stuff</button>
+
+        <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form class="task-form" (ngSubmit)="submit()" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <label>Item Name</label>
+                            <input
+                                    ngControl="name"
+                                    class="form-control form-control-lg"
+                            [(ngModel)]="name"
+                            type = "text">
+                        </div>
+                        <div class="col-xs-12 form-group">
+                            <label>Description</label>
+                            <textarea
+                                    ngControl="description"
+                                    class="form-control form-control-lg"
+                                    rows="5"
+                            [(ngModel)]="description"
+                            type = "text">
+                        </textarea>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <label>Category</label>
+                        <input
+                                ngControl="category"
+                                class="form-control form-control-lg"
+                        [(ngModel)]="category"
+                        placeholder="will switch to select input type"
+                        type = "text">
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <label>Price</label>
+                        <input
+                                ngControl="price"
+                                class="form-control form-control-lg"
+                        [(ngModel)]="price"
+                        type = "number">
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <label>Contact</label>
+                        <input
+                                ngControl="contact"
+                                class="form-control form-control-lg"
+                        [(ngModel)]="contact"
+                        type = "text">
+                        <br>
+                        xcoord
+                        <input
+                                ngControl="xcoord"
+                                class="form-control form-control-lg"
+                        [(ngModel)]="xcoord"
+                        type = "number">
+                        ycoord
+                        <input
+                                ngControl="ycoord"
+                                class="form-control form-control-lg"
+                        [(ngModel)]="ycoord"
+                        type = "number">
+                        <br>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <label>Photos</label>
+                        <input
+                                class="form-control form-control-lg"
+                                enctype="multipart/form-data"
+                                ngControl="picture"
+                                type="file">
+                        File URL
+                        <input
+                                ngControl="picture"
+                        [(ngModel)]="picture"
+                        type = "URL">
+                    </div>
+
+
+                    <div class="col-xs-6 form-group">
+                        <button type="submit" class="btn btn-primary btn-lg hvr-glow">Add Item</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Add Item</button>
+            </div>
+        </div>
+</form>
+
+    </div>
+</div>
+
+
+
+
+

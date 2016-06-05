@@ -22,15 +22,15 @@ import {AuthService} from "../../../core/auth/auth-service";
   ],
   template: `
     <ul class="task-filters">
-      <li><a [class.active]="!activeFilter" [routerLink]="['/Tasks']">View All</a></li>
-      <li><a [class.active]="activeFilter == 'active'" [routerLink]="['/Tasks', {filter: 'active'}]">Active</a></li>
-      <li><a [class.active]="activeFilter == 'completed'" [routerLink]="['/Tasks', {filter: 'completed'}]">Completed</a></li>
+      <!--<li><a [class.active]="!activeFilter" [routerLink]="['/Tasks']">View All</a></li>-->
+      <!--<li><a [class.active]="activeFilter == 'active'" [routerLink]="['/Tasks', {filter: 'active'}]">Active</a></li>-->
+      <!--<li><a [class.active]="activeFilter == 'completed'" [routerLink]="['/Tasks', {filter: 'completed'}]">Completed</a></li>-->
     </ul>
     
     <div class="task-list">
       <div *ngFor="let task of taskItems$ | async | filterTasks:activeFilter">
         <!--{{getUserID()}}::{{task.user_id}}-->
-        <task-item *ngIf="getUserID() == task.user_id" [task]="task"          
+        <task-item *ngIf="getUserID() == task.userId" [task]="task"          
             (remove)="remove.emit(task)"
             (update)="update.emit({task: task, changes: $event})">          
         </task-item>
