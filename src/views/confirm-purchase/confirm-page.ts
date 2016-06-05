@@ -12,10 +12,10 @@ import { Autofocus } from 'src/views/common';
   styles: [
     require('./confirm-page.scss')
   ],
-  template: require('./confirm-page')
+  template: require('./confirm-page.html')
 })
 
-export class confirm-page
+export class ConfirmPage
 {
-	
+	@Input() task: ITask;
 }

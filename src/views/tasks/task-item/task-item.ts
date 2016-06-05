@@ -23,7 +23,7 @@ export class TaskItem {
   editing: boolean = false;
   name: string = '';
   price: number = 0;
-  picture: URL='';
+  picture: URL=null;
   completed: boolean = true;
 
   editname(): void {

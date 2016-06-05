@@ -1,6 +1,6 @@
 <div
   [ngClass]="{'task-item--completed': task.completed, 'task-item--editing': editing}"
-  class="task-item"
+  class="task-item row"
   tabindex="0">
 
   <div class="cell">
@@ -22,8 +22,9 @@
       tabindex="0">
       {{ task.name }}
 	  Price {{ task.price}}
-	  <span class="label label-info" >{{task.completed ? "Rented":""}}</span>
-    </div>
+
+    </div><span class="label label-info pull-right" style="margin-top: 1em;" >{{task.completed ? "Rented":""}}</span>
+      
 
     <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
       
