@@ -1,7 +1,6 @@
 <!-- search for rentals -->
-<div class="container text-center" style="padding: 90px 0;">
-	<h1>What can we help you rent?</h1>
-<div class="row" style="padding: 40px 0;">
+<div class="container text-center" style="padding: 0px 0;">
+<div class="row" style="padding: px 0;">
 <!--	<div class="col-lg-8"> -->
 	<div class="col-lg-8">
 		<form action="/search">
@@ -11,7 +10,7 @@
 						<input type="text" class="form-control form-control-lg col-lg-4"
 							   placeholder="e.g. Carpet Cleaner in Calgary" queryString="query" value="{{searchText}}">
 					</div>
-					<div id="advOpt" class="input-group-lg" style="margin-top: 60px; clear: both;" *ngIf=visible>
+					<div id="advOpt" class="input-group-lg" style="margin-top: 10px; clear: both;" *ngIf=visible>
 					<label for="price-range">Price Range:</label>
 					<input type="int" id="price-range" priceFilter="price" placeholder="From"> - <input type="int" id="price-range-to" priceFilter="price" placeholder="To"><br />
 					<label for="location">Location range:</label>
@@ -23,7 +22,7 @@
 						<option value="over10">10 KM+</option>
 					</select>
 				</div>						
-					<div style="margin-top: 60px; clear: both;">
+					<div style="margin-top: 20px; clear: both;">
 						<button type="submit" class="btn btn-primary btn-lg">Find Stuff</button>
 						<button type="submit" class="btn btn-primary-outline btn-lg" (click)="clickAdvanced()">Advanced Search</button>
 					</div>

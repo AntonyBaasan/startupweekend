@@ -5,7 +5,7 @@ import { FirebaseListObservable } from 'angularfire2';
 import { ITask } from 'src/core/task';
 import { TaskItem } from 'src/views/tasks/task-item/task-item';
 import { TaskService } from 'src/core/task';
-import { SearchForm } from 'src/views/search-form';
+import { SearchFormSmall } from 'src/views/search-form-small';
 
 @Component({
   selector: 'search-result',
@@ -16,7 +16,7 @@ import { SearchForm } from 'src/views/search-form';
   directives: [
     RouterLink,
     TaskItem,
-      SearchForm
+    SearchFormSmall
   ],
 })
 

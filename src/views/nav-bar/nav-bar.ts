@@ -24,9 +24,8 @@ import { Router }              from '@angular/router-deprecated';
 
 export class NavBar {
     authenticated: boolean;
-    authService : AuthService;
+    authService : AuthService;//TODO: Huuuge error with Sevice state, Anuglar2 BUG
 
-    //constructor(private auth: AuthService, private router: Router) {}
     constructor(private router:Router, private auth: AuthService) {
         console.log("auth: "+auth);
         console.log("auth.authenticated: "+auth.authenticated);
