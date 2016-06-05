@@ -3,11 +3,12 @@
 
 
 <div class="task-list">
+	<div class="container">
 	<div *ngFor="let task of taskItems$ | async">
 		<!--{{task.name.indexOf(searchText)}}-->
 
-		<div class="container" *ngIf="isMoreZero(task.name.indexOf(searchText))">
-			<div class="row"> 
+		<div  *ngIf="isMoreZero(task.name.indexOf(searchText))">
+			<!-- <div class="row"> -->
 					<div class="col-md-4">
 						<div class="panel panel-default">
 							<div class="panel-body">
@@ -21,7 +22,8 @@
 							</div>
 						</div>
 					</div>
-			</div>
+			<!-- </div> -->
 		</div>
+	</div>
 	</div>
 </div>
