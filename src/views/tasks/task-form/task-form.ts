@@ -9,32 +9,25 @@ import { Task } from 'src/core/task/task';
     require('./task-form.scss')
   ],
   template: `
-    <div class="container">
+    <div class="container-fluid">
     <div class="row">
         <form class="task-form form-group" (ngSubmit)="submit()" novalidate >
-		<div class="col-xs-6 form-group">
-		<label>Photos</label>
-		<input 
-			class="form-control form-control-lg"
-			enctype="multipart/form-data"
-			ngControl="picture"
-			type = "file">
-		</div>
-		<div class="col-xs-6 form-group">
-		<label>Name</label>
+		<div class="col-xs-12 form-group">
+		<label>Item Title</label>
 		<input
 			ngControl="name"
 			class="form-control form-control-lg"
 			[(ngModel)]="name"
 			type = "text">
 		</div>
-		<div class="col-xs-6 form-group">
+		<div class="col-xs-12 form-group">
 		<label>Description</label>
-		<input
+		<textarea
 			ngControl="description"
 			class="form-control form-control-lg"
+			rows="5"
 			[(ngModel)]="description"
-			type = "text">
+			type = "text"></textarea>
 		</div>
 		<div class="col-xs-6 form-group">
 		<label>Category</label>
@@ -42,6 +35,7 @@ import { Task } from 'src/core/task/task';
 			ngControl="category"
 			class="form-control form-control-lg"
 			[(ngModel)]="category"
+			placeholder="will switch to select input type"
 			type = "text">
 		</div>
 		<div class="col-xs-6 form-group">
@@ -73,6 +67,14 @@ import { Task } from 'src/core/task/task';
 			[(ngModel)]="ycoord"
 			type = "number">
 		<br>
+		</div>
+		<div class="col-xs-6 form-group">
+		<label>Photos</label>
+		<input 
+			class="form-control form-control-lg"
+			enctype="multipart/form-data"
+			ngControl="picture"
+			type = "file">
 		</div>
 		<div class="col-xs-6 form-group">
 		<button type="submit" class="btn btn-primary btn-lg hvr-glow">Add Item</button>
