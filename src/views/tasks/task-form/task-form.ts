@@ -10,22 +10,11 @@ import { Task } from 'src/core/task/task';
   ],
   template: `
     <form class="task-form" (ngSubmit)="submit()" novalidate >
-      <input
-        (keyup.escape)="clear()"
-        ngControl="title"
-        [(ngModel)]="title"
-        autocomplete="off"
-        autofocus
-        class="task-form__input"
-        placeholder="What needs to be done?"
-        required
-        type="text">
 		
 		picture
 		<input 
 			enctype="multipart/form-data"
-			ngControl="file"
-			[(ngModel)]="file"
+			ngControl="picture"
 			type = "file">
 		<br>
 		name
@@ -68,6 +57,9 @@ import { Task } from 'src/core/task/task';
 			ngControl="ycoord"
 			[(ngModel)]="ycoord"
 			type = "number">
+		<br>
+		<input
+			type="submit" value="Add Item">
 		
     </form>
   `
@@ -76,8 +68,7 @@ import { Task } from 'src/core/task/task';
 export class TaskForm {
   @Output() createTask: EventEmitter<Task> = new EventEmitter(false);
 
-  //console.log(this.file);
-  
+  picture: Blob
   title: string = '';
   name: string ='';
   description: string ='';
@@ -87,18 +78,18 @@ export class TaskForm {
   xcoord: number = 0;
   ycoord: number = 0;
   
-
+ 
   clear(): void {
-    this.title = '';
+    this.name = '';
   }
 
   submit(): void {
-    const title: string = this.title.trim();
-
-	const allinfo : ITask = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord)
 	
+	var allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord);//, this.picture);
 	
-    if (title.length) {
+	console.log(this.picture);
+	
+    if (this.name.length) {
       this.createTask.emit(allinfo);
     }
     this.clear();

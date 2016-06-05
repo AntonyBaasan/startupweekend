@@ -4,8 +4,8 @@ export interface ITask {
   $key?: string;
   completed: boolean;
   createdAt: number;
-  title: string;
-    picture: string ;
+  
+    picture: Blob ;
     name: string;
     description: string;
     category: string;
@@ -17,8 +17,8 @@ export interface ITask {
 export class Task implements ITask {
   completed: boolean = false;
   createdAt: number = Firebase.ServerValue.TIMESTAMP;
-    title: string;
-    picture: string ;
+  
+    picture: Blob;
     name: string;
     description: string;
     category: string;

@@ -21,18 +21,18 @@ export class TaskItem {
   @Output() update: EventEmitter<any> = new EventEmitter(false);
 
   editing: boolean = false;
-  title: string = '';
+  name: string = '';
 
-  editTitle(): void {
+  editname(): void {
     this.editing = true;
-    this.title = this.task.title;
+    this.name = this.task.name;
   }
 
-  saveTitle(): void {
+  savename(): void {
     if (this.editing) {
-      const title: string = this.title.trim();
-      if (title.length && title !== this.task.title) {
-        this.update.emit({title});
+      const name: string = this.name.trim();
+      if (name.length && name !== this.task.name) {
+        this.update.emit({name});
       }
       this.stopEditing();
     }
