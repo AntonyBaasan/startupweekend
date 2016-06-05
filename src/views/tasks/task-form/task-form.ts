@@ -13,9 +13,9 @@ import { Task } from 'src/core/task/task';
 		
 		picture
 		<input 
-			enctype="multipart/form-data"
 			ngControl="picture"
-			type = "file">
+			[(ngModel)]="picture"
+			type = "URL">
 		<br>
 		name
 		<input
@@ -68,7 +68,7 @@ import { Task } from 'src/core/task/task';
 export class TaskForm {
   @Output() createTask: EventEmitter<Task> = new EventEmitter(false);
 
-  picture: Blob;
+  picture: URL;
   title: string = '';
   name: string ='';
   description: string ='';
@@ -85,7 +85,7 @@ export class TaskForm {
 
   submit(): void {
 	
-	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord);//, this.picture);
+	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord, this.picture);
 	
 	console.log(this.picture);
 	

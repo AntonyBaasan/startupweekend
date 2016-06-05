@@ -5,7 +5,7 @@ export interface ITask {
   completed: boolean;
   createdAt: number;
   
-    picture: Blob ;
+    picture: URL;
     name: string;
     description: string;
     category: string;
@@ -18,7 +18,7 @@ export class Task implements ITask {
   completed: boolean = false;
   createdAt: number = Firebase.ServerValue.TIMESTAMP;
   
-    picture: Blob;
+    picture: URL;
     name: string;
     description: string;
     category: string;
@@ -32,8 +32,8 @@ export class Task implements ITask {
 			price: number, 
 			contact: string, 
 			xcoord: number, 
-			ycoord: number) {
-    //this.picture = picture
+			ycoord: number, picture: URL) {
+    this.picture = picture
 	this.name = name;
 	this.description= description;
 	this.category = category;
