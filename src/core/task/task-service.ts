@@ -11,8 +11,8 @@ export class TaskService {
   taskItems$: FirebaseListObservable<ITask[]>;
 
   constructor(af: AngularFire, auth: AuthService) {
-   this.taskItems$ = af.list(`/tasks/${auth.id}`) as FirebaseListObservable<ITask[]>;
-    // this.taskItems$ = af.list(`/tasks`) as FirebaseListObservable<ITask[]>;
+//   this.taskItems$ = af.list(`/tasks/${auth.id}`) as FirebaseListObservable<ITask[]>; q
+     this.taskItems$ = af.list(`/tasks/`) as FirebaseListObservable<ITask[]>;
 
     console.log("this.taskItems$: "+this.taskItems$);
   }

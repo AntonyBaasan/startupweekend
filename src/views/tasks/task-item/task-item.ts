@@ -22,10 +22,14 @@ export class TaskItem {
 
   editing: boolean = false;
   name: string = '';
+  price: number = 0;
+  picture: URL='';
 
   editname(): void {
     this.editing = true;
     this.name = this.task.name;
+	this.price = this.task.price;
+	this.picture = this.task.picture;
   }
 
   savename(): void {

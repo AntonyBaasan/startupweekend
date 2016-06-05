@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { ITask } from 'src/core/task';
 import { Task } from 'src/core/task/task';
+import {AuthService} from "../../../core/auth/auth-service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,11 +10,13 @@ import { Task } from 'src/core/task/task';
     require('./task-form.scss')
   ],
   template: `
+    <form class="task-form" (ngSubmit)="submit()" novalidate >
+		
     <div class="container-fluid">
     <div class="row">
         <form class="task-form form-group" (ngSubmit)="submit()" novalidate >
 		<div class="col-xs-12 form-group">
-		<label>Item Title</label>
+		<label>Item Name</label>
 		<input
 			ngControl="name"
 			class="form-control form-control-lg"
@@ -75,7 +78,15 @@ import { Task } from 'src/core/task/task';
 			enctype="multipart/form-data"
 			ngControl="picture"
 			type = "file">
+		File URL
+		<input 
+			ngControl="picture"
+			[(ngModel)]="picture"
+			type = "URL">
 		</div>
+		
+		
+		
 		<div class="col-xs-6 form-group">
 		<button type="submit" class="btn btn-primary btn-lg hvr-glow">Add Item</button>
 		</div>
@@ -88,7 +99,7 @@ import { Task } from 'src/core/task/task';
 export class TaskForm {
   @Output() createTask: EventEmitter<Task> = new EventEmitter(false);
 
-  picture: Blob;
+  picture: URL;
   title: string = '';
   name: string ='';
   description: string ='';
@@ -97,15 +108,18 @@ export class TaskForm {
   contact: string ='';
   xcoord: number = 0;
   ycoord: number = 0;
-  
- 
+
+  constructor(private auth: AuthService) {}
+    
   clear(): void {
     this.name = '';
   }
 
   submit(): void {
-	
-	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord);//, this.picture);
+
+    console.log("this.auth.id:  "+this.auth.id);
+
+	const allinfo = new Task(this.name, this.description, this.category, this.price, this.contact, this.xcoord, this.ycoord, this.picture, this.auth.id);
 	
 	console.log(this.picture);
 	

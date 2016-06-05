@@ -1,7 +1,25 @@
 <searchform-small [searchText]="searchText"></searchform-small>
 
 <div class="task-list">
-    <div *ngFor="let task of taskItems$ | async">
-        <div>{{task.title}}</div>
-    </div>
+	<div *ngFor="let task of taskItems$ | async">
+		<div class="container">
+			<div class="row"> 
+				<div *ngFor="let task of taskItems$ | async">
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<img class="card-img-top" src="{{task.picture}}" alt={{task.name}}>
+								<div class="card-block">
+									<h3 class="card-title">{{task.name}} </h3>
+									<p class="card-text">"{{task.description}}</p>
+									<a href="#" class="card-link">{{task.contact}}</a>
+									<a href="#" class="btn btn-primary pull-right">{{task.price}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
