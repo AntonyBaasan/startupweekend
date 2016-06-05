@@ -13,7 +13,7 @@
   border-bottom: 1px dotted #666;
   height: 60px;
   overflow: hidden;
-  color: #fff;
+  color: #666;
   font-size: rem(18px);
   font-weight: 300;
 
@@ -91,7 +91,7 @@
 //  TITLE : STATIC
 //-------------------------------------
 @keyframes fade-title {
-  from { color: #fff; }
+  from { color: #666; }
   to { color: #666; }
 }
 
@@ -121,7 +121,7 @@
   }
 
   .task-item--completed & {
-    color: #666;
+    color: #666666;
   }
 
   .task-item--completed &:after {

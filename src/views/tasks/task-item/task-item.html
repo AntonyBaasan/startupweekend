@@ -21,8 +21,8 @@
       class="task-item__title"
       tabindex="0">
       {{ task.name }}
-	  Price 
-	  {{ task.price}}
+	  Price {{ task.price}}
+	  <span class="label label-info" >{{task.completed ? "Rented":""}}</span>
     </div>
 
     <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
