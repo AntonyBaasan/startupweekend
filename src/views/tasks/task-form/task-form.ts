@@ -9,23 +9,13 @@ import { Task } from 'src/core/task/task';
     require('./task-form.scss')
   ],
   template: `
-<<<<<<< HEAD
     <form class="task-form" (ngSubmit)="submit()" novalidate >
 		
-		picture
-		<input 
-			ngControl="picture"
-			[(ngModel)]="picture"
-			type = "URL">
-		<br>
-		name
-=======
     <div class="container-fluid">
     <div class="row">
         <form class="task-form form-group" (ngSubmit)="submit()" novalidate >
 		<div class="col-xs-12 form-group">
-		<label>Item Title</label>
->>>>>>> 89dc846a1280ab41dc20ca906ec776a418ce33dc
+		<label>Item Name</label>
 		<input
 			ngControl="name"
 			class="form-control form-control-lg"
@@ -87,7 +77,15 @@ import { Task } from 'src/core/task/task';
 			enctype="multipart/form-data"
 			ngControl="picture"
 			type = "file">
+		File URL
+		<input 
+			ngControl="picture"
+			[(ngModel)]="picture"
+			type = "URL">
 		</div>
+		
+		
+		
 		<div class="col-xs-6 form-group">
 		<button type="submit" class="btn btn-primary btn-lg hvr-glow">Add Item</button>
 		</div>
