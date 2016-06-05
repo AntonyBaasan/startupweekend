@@ -14,14 +14,18 @@
 					<div id="advOpt" class="input-group-lg" style="margin-top: 60px; clear: both;" *ngIf=visible>
 					<label for="price-range">Price Range:</label>
 					<input type="int" id="price-range" priceFilter="price" placeholder="From"> - <input type="int" id="price-range-to" priceFilter="price" placeholder="To"><br />
-					<label for="location">Location range:</label>
-					<select id="location" class="c-select" location="location">
+						<div class="col-lg-8">
+
+						<label for="location">Location range:</label>
+						<div class="col-lg-4 pull-right">
+							<select id="location" class="form-control" location="location">
 						<option value="km1">Within 1 KM</option>
 						<option value="km3">Within 3 KM</option>
 						<option value="km5" selected>Within 5 KM</option>
 						<option value="km10">Within 10 KM</option>
 						<option value="over10">10 KM+</option>
 					</select>
+						</div></div>
 				</div>						
 					<div style="margin-top: 60px; clear: both;">
 						<button type="submit" class="btn btn-primary btn-lg">Find Stuff</button>
