@@ -4,6 +4,7 @@
 import { Component, Input } from '@angular/core';
 import { CanActivate } from '@angular/router-deprecated';
 import { AuthRouteHelper, AuthService } from 'src/core/auth';
+import { Router }              from '@angular/router-deprecated';
 // import { TaskService } from 'src/core/task';
 // import { TaskForm } from './task-form/task-form';
 // import { TaskList } from './task-list/task-list';
@@ -26,14 +27,15 @@ export class NavBar {
     authService : AuthService;
 
     //constructor(private auth: AuthService, private router: Router) {}
-    constructor(private auth: AuthService) {
+    constructor(private router:Router, private auth: AuthService) {
         console.log("auth: "+auth);
         console.log("auth.authenticated: "+auth.authenticated);
         this.authenticated = auth.authenticated;
         this.authService = auth;
-        // setTimeout(() => this.updateLoginArea(), 2000);
-        // this.updateLoginArea()
+    }
 
+    search(searchText: string):void{
+        this.router.navigate(['/Search', searchText]);
     }
 
     signOut(): void {
