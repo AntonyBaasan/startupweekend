@@ -45,6 +45,7 @@ export class SearchResult implements OnInit {
 
   hasResult(): boolean{
     // taskService.taskItems$
+    return true;
   }
 
 }
