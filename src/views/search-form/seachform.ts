@@ -19,8 +19,15 @@ export class SearchForm {
 
   @Input() searchText: string;
 
+  constructor(private router:Router) {
+  }
+  
   clickAdvanced():void{
 	this.visible = !this.visible;	
+  }
+
+  search(searchText: string):void{
+    this.router.navigate(['/Search', { search: searchText }]);
   }
 
 }
