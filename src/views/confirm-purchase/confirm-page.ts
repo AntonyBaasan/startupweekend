@@ -17,5 +17,12 @@ import { Autofocus } from 'src/views/common';
 
 export class ConfirmPage
 {
-	@Input() task: ITask;
+	days: number=0;
+	price: number=18;
+	priceTot: number;
+	
+	getPrice()
+	{
+		this.priceTot = 18*this.price;
+	}
 }

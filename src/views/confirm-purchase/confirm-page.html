@@ -10,7 +10,9 @@
 	</select>
 	
 <h2> How many days would you like to rent it for? </h2>
-<input type="number">
-	
+<input type="number" >	
 </div>
-<h2 id="price"> Total Price </h2>
+
+<button id="getPrice" (click)="getPrice()" >
+<h2 id="price" > Total Price </h2> 
+<label> {{priceTot}} </label>
