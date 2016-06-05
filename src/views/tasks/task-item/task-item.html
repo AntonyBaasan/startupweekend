@@ -1,20 +1,19 @@
 
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <img style="width:100px;height:100px;" src="{{ task.picture }}" alt="{{ task.name }}">
+                    <img src="{{ task.picture }}" alt="{{ task.name }}">
                     <div class="card-block">
                         <h3 class="card-title">{{ task.name }}</h3>
                         <p class="card-text">{{ task.description }}</p>
-                        <a href="#" class="card-link">Return</a>
+                        <!--<a href="#" class="card-link">Return</a>-->
                         <!--<a href="confirm" class="btn btn-primary pull-right">Rent $18/day</a>-->
                         <button
                             *ngIf="!editing"
                             (click)="remove.emit()"
-                            aria-label="Delete task"
-                            class="task-item__button"
+                            class="btn btn-danger"
                             type="button">
-                            <span class="icon material-icons">delete</span>
+                            remove
                             </button>
 
                 </div>
