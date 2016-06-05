@@ -8,6 +8,7 @@ import { MainPage } from 'src/views/main';
 import { SearchResult } from 'src/views/search-result';
 import { Rented } from 'src/views/rented';
 import { AppHeader } from './app-header';
+import { ConfirmPage } from 'src/views/confirm-purchase';
 
 
 @RouteConfig([
@@ -16,6 +17,7 @@ import { AppHeader } from './app-header';
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'}),
   new Route({path: '/rented', component: Rented, name: 'Rented'})
+  new Route({path: '/confirm', component: ConfirmPage, name: 'confirmPage'})
 ])
 
 @Component({
