@@ -16,8 +16,8 @@ import { ConfirmPage } from 'src/views/confirm-purchase';
   new Route({path: '/search', component: SearchResult, name: 'Search'}),
   new Route({path: '/signin', component: SignIn, name: 'SignIn'}),
   new Route({path: '/tasks', component: Tasks, name: 'Tasks'}),
-  new Route({path: '/rented', component: Rented, name: 'Rented'})
-  new Route({path: '/confirm', component: ConfirmPage, name: 'confirmPage'})
+  new Route({path: '/rented', component: Rented, name: 'Rented'}),
+  new Route({path: '/confirm', component: ConfirmPage, name: 'ConfirmPage'})
 ])
 
 @Component({

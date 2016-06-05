@@ -31,7 +31,7 @@ export class SearchResult implements OnInit {
   searchText: string;
 
   constructor(private params: RouteParams, private taskService: TaskService) {
-    this.taskItems$ = taskService.taskItems$
+    this.taskItems$ = taskService.taskItems$;
     this.activeFilter = params.get('filter');
   }
 
@@ -41,6 +41,10 @@ export class SearchResult implements OnInit {
 
   isMoreZero(n : number): boolean{
     return n >= 0;
+  }
+
+  hasResult(): boolean{
+    // taskService.taskItems$
   }
 
 }

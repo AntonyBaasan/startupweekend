@@ -18,7 +18,6 @@ if (process.env.NODE_ENV === 'production') {
   enableProdMode();
 }
 
-
 const providers: any[] = [
   AUTH_PROVIDERS,
   FIREBASE_APP_PROVIDERS,
