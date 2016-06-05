@@ -109,9 +109,14 @@ export class TaskForm {
   contact: string ='';
   xcoord: number = 0;
   ycoord: number = 0;
-  
- 
-  clear(): void {
+
+
+    // constructor(params: RouteParams) {
+    //     this.activeFilter = params.get('filter');
+    // }
+
+    
+    clear(): void {
     this.name = '';
   }
 

@@ -19,7 +19,7 @@
       *ngIf="!editing"
       class="task-item__title"
       tabindex="0">
-      {{ task.title }}
+      {{ task.name }}
     </div>
 
     <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
