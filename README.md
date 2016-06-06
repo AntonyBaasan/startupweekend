@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/antonybaasan/startupweekend.svg?branch=master)](https://travis-ci.org/antonybaasan/startupweekend)
+[![Build Status](https://travis-ci.org/AntonyBaasan/startupweekend.svg?branch=master)](https://travis-ci.org/AntonyBaasan/startupweekend)
 
 
 # Calgary Startup Weekend 2016 project 
