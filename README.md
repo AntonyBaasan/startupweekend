@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/AntonyBaasan/startupweekend.svg?branch=master)](https://travis-ci.org/AntonyBaasan/startupweekend)
 
 
-# Calgary Startup Weekend 2016 project 
+# Calgary Startup Weekend 2016 project
+
+Angular 2 project with Firebase (legacy) backend.
 
 
 Seed project: [https://github.com/r-park/todo-angular2-firebase](https://github.com/r-park/todo-angular2-firebase)
